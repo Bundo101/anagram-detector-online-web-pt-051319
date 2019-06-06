@@ -13,6 +13,7 @@ class Anagram
         matches << anagram
       end
     end
+    matches
   end
   
 end
