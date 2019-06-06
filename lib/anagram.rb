@@ -9,13 +9,11 @@ class Anagram
   end
   
   def match(anagrams_array)
-    matches = []
-    anagrams_array.each do |anagram|
+    anagrams_array.map do |anagram|
       if anagram.split("").sort == @word.split("").sort
         matches << anagram
       end
     end
-    matches
   end
   
 end
