@@ -1,3 +1,5 @@
+require 'pry'
+
 class Anagram
   
   attr_accessor :word
@@ -10,6 +12,7 @@ class Anagram
     matches = []
     possible_anagrams_array.each do |anagram|
       if anagram.split.sort == @word.split.sort
+        binding.pry
         matches << anagram
       end
     end
