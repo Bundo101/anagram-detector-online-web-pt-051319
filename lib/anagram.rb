@@ -9,8 +9,9 @@ class Anagram
   def match(possible_anagrams_array)
     matches = []
     possible_anagrams_array.each do |anagram|
-      if anagram == @word
+      if anagram.downcase.sort == @word.downcase.sort
         matches << anagram
+      end
     end
   end
   
